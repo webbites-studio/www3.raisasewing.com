@@ -387,7 +387,8 @@
         }
 
         form input,
-        form textarea {
+        form textarea,
+        form select {
             border: none;
             border-bottom: 1px solid var(--border-color);
             padding: 10px 0;
@@ -399,8 +400,31 @@
             transition: border-color 0.3s ease;
         }
 
+        form select {
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23767676' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0 center;
+            background-size: 20px;
+            padding-right: 25px;
+        }
+
+        [data-theme="dark"] form select {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a0a0a0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        }
+
+        form select option {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 10px;
+        }
+
         form input:focus,
-        form textarea:focus {
+        form textarea:focus,
+        form select:focus {
             border-bottom: 1px solid var(--text-main);
         }
 
@@ -894,28 +918,51 @@
 
             <!-- MINIMALIST CONTACT FORM -->
             <div>
-                <form
-                    onsubmit="event.preventDefault(); alert('Inquiry logged successfully. Our studio coordinator will contact you shortly.'); this.reset();">
+                <form onsubmit="event.preventDefault(); 
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const service = document.getElementById('service').value;
+                    const message = document.getElementById('message').value;
+                    const subject = 'Inquiry from ' + name;
+                    const body = 'Full Name: ' + name + '\n\n' +
+                                 'Email Address: ' + email + '\n' +
+                                 'Phone Number: ' + phone + '\n' +
+                                 'Requested Service: ' + service + '\n\n' +
+                                 'Project Description / Notes:\n' + message;
+                    window.location.href = 'mailto:info@atelierraisa.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+                    return false;">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" required autocomplete="name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" required autocomplete="email">
+                        <input type="email" id="email" autocomplete="email">
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" required autocomplete="tel">
+                        <input type="tel" id="phone" autocomplete="tel">
                     </div>
                     <div class="form-group">
                         <label for="service">Requested Service</label>
-                        <input type="text" id="service" placeholder="e.g., Bridal Alteration / Hemming" required>
+                        <select id="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="Wedding Dress - Custom Design">Wedding Dress - Custom Design</option>
+                            <option value="Wedding Dress - Alteration">Wedding Dress - Alteration</option>
+                            <option value="Prom Dress - Custom Design">Prom Dress - Custom Design</option>
+                            <option value="Prom Dress - Alteration">Prom Dress - Alteration</option>
+                            <option value="Evening Wear - Custom Design">Evening Wear - Custom Design</option>
+                            <option value="Corporate Dress - Custom Design">Corporate Dress - Custom Design</option>
+                            <option value="Clothing Alteration">Clothing Alteration</option>
+                            <option value="Clothing Repair">Clothing Repair</option>
+                            <option value="Custom Jewelry">Custom Jewelry</option>
+                            <option value="Other">Other (Please describe in notes)</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="message">Project Description / Notes</label>
-                        <textarea id="message" placeholder="Describe your garment specifications..."
-                            required></textarea>
+                        <textarea id="message" placeholder="Describe your garment specifications..."></textarea>
                     </div>
                     <button type="submit">Submit Request</button>
                 </form>
