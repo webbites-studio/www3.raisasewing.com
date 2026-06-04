@@ -68,7 +68,8 @@
             width: 100%;
             height: 80px;
             background-color: var(--light);
-            border-bottom: 3px solid var(--accent);
+            border-bottom: 8px solid transparent;
+            border-image: url('./images/zebra-pattern.jpg') 30 round;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -78,19 +79,21 @@
         }
 
         .logo-bold {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
             text-decoration: none;
-            display: flex;
-            align-items: center;
+            letter-spacing: -1px;
         }
 
-        .logo-bold img {
-            height: 60px;
-            width: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .logo-bold img:hover {
-            transform: scale(1.05);
+        .logo-bold span {
+            background-image: url('./images/zebra-pattern.jpg');
+            background-size: auto 100%;
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
         }
 
         .top-nav {
@@ -135,7 +138,8 @@
             padding: 10px 20px;
             background-color: var(--accent);
             color: white;
-            border: none;
+            border: 4px solid transparent;
+            border-image: url('./images/zebra-pattern.jpg') 30 round;
             font-weight: 600;
             cursor: pointer;
             text-transform: uppercase;
@@ -166,6 +170,34 @@
             justify-content: center;
             overflow: hidden;
             z-index: 10;
+            border-right: 12px solid transparent;
+            border-image: url('./images/zebra-pattern.jpg') 30 round;
+        }
+
+        .hero-left::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-image: url('./images/zebra-pattern.jpg');
+            background-size: auto 100%;
+            background-repeat: repeat-x;
+            z-index: 11;
+        }
+
+        .hero-left::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-image: url('./images/zebra-pattern.jpg');
+            background-size: auto 100%;
+            background-repeat: repeat-x;
+            z-index: 11;
         }
 
 
@@ -202,7 +234,10 @@
             letter-spacing: 2px;
             font-size: 0.9rem;
             transition: background-color 0.3s ease, transform 0.3s ease;
-            border: 3px solid var(--accent);
+            border: 6px solid transparent;
+            border-image: url('./images/zebra-pattern.jpg') 30 round;
+            position: relative;
+            z-index: 12;
         }
 
         .cta-button:hover {
@@ -258,16 +293,29 @@
         .about-number {
             font-size: 8rem;
             font-weight: 800;
-            color: var(--accent);
-            opacity: 0.3;
             line-height: 0.8;
             margin-bottom: 30px;
+            background-image: url('./images/zebra-pattern.jpg');
+            background-size: auto 100%;
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
         }
 
         .about-oversized h2 {
             font-size: 3.5rem;
             margin-bottom: 50px;
             letter-spacing: -2px;
+            background-image: url('./images/zebra-pattern.jpg');
+            background-size: auto 100%;
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            display: inline-block;
         }
 
         .about-text-columns {
@@ -326,6 +374,8 @@
             letter-spacing: 2px;
             margin-bottom: 30px;
             width: fit-content;
+            border: 4px solid transparent;
+            border-image: url('./images/zebra-pattern.jpg') 30 round;
         }
 
         .service-content h3 {
@@ -383,6 +433,12 @@
             background: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
         }
 
+        /* --- GALLERY ITEMS WITH ZEBRA BORDERS --- */
+        .gallery-item-bold {
+            border: 4px solid transparent;
+            border-image: url('./images/zebra-pattern.jpg') 30 round;
+        }
+
         /* --- GRID GALLERY --- */
         .gallery-bold {
             position: relative;
@@ -415,6 +471,13 @@
             margin-bottom: 80px;
             text-align: center;
             letter-spacing: -2px;
+            background-image: url('./images/zebra-pattern.jpg');
+            background-size: auto 100%;
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
         }
 
         .gallery-grid-bold {
@@ -469,6 +532,12 @@
             font-size: 4rem;
             margin-bottom: 80px;
             letter-spacing: -2px;
+        }
+
+        .testimonials-bold {
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-image: url('./images/zebra-pattern.jpg') 30 round;
         }
 
         .testimonial-slider-bold {
@@ -589,7 +658,8 @@
             padding: 20px;
             background-color: var(--accent);
             color: white;
-            border: none;
+            border: 6px solid transparent;
+            border-image: url('./images/zebra-pattern.jpg') 30 round;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -643,9 +713,12 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-image: url('./images/zebra-pattern.jpg') 30 round;
         }
 
-        /* --- ZEBRA PATTERN DIVIDER --- */
+        /* --- ZEBRA PATTERN: GLOBAL --- */
         .zebra-divider {
             width: 100%;
             height: 120px;
@@ -655,6 +728,14 @@
             background-repeat: repeat-x;
             position: relative;
             overflow: hidden;
+        }
+
+        .zebra-divider.tall {
+            height: 200px;
+        }
+
+        .zebra-divider.thin {
+            height: 60px;
         }
 
         .zebra-divider::after {
@@ -668,6 +749,39 @@
                     rgba(0, 0, 0, 0.05) 0%,
                     transparent 50%,
                     rgba(0, 0, 0, 0.05) 100%);
+        }
+
+        /* Zebra accent strips for top bar, footer, and section headers */
+        .zebra-strip {
+            background-image: url('./images/zebra-pattern.jpg');
+            background-size: auto 100%;
+            background-position: center;
+            background-repeat: repeat-x;
+        }
+
+        /* Vertical zebra stripe (for side accents) */
+        .zebra-vertical {
+            background-image: url('./images/zebra-pattern.jpg');
+            background-size: 100% auto;
+            background-position: center;
+            background-repeat: repeat-y;
+        }
+
+        /* Animated zebra text */
+        @keyframes zebraShift {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .zebra-text {
+            background-image: url('./images/zebra-pattern.jpg');
+            background-size: auto 100%;
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            animation: zebraShift 20s linear infinite;
         }
 
         /* --- LIGHTBOX --- */
@@ -834,7 +948,7 @@
 
     <!-- TOP BAR -->
     <div class="top-bar">
-        <a href="#home" class="logo-bold"><img src="images/logo.jpg" alt="Raisa's Atelier Logo"></a>
+        <a href="#home" class="logo-bold">RAISA'S <span>ATELIER</span></a>
         <div class="top-nav">
             <a href="#home" class="nav-link-bold active">Home</a>
             <a href="#about" class="nav-link-bold">About</a>
@@ -886,7 +1000,7 @@
 
     <!-- OVERSIZED ABOUT -->
     <section class="about-oversized" id="about">
-        <div class="about-number"></div>
+        <div class="about-number">01</div>
         <h2>My Story</h2>
         <div class="about-text-columns">
             <p>I was born in the small town of Plesetsk in Northwestern Russia, where I lived for 37 years. After
@@ -965,7 +1079,7 @@
 
         <div class="service-row">
             <div class="service-content">
-                <span class="service-label">Service</span>
+                <span class="service-label">Service 02</span>
                 <h3>Alteration & Repair</h3>
                 <p>A wardrobe is an investment, but even the finest off-the-rack clothing rarely fits perfectly right
                     out of the box. Professional alteration and repair services bridge the gap between a standard
@@ -995,7 +1109,7 @@
 
         <div class="service-row">
             <div class="service-content">
-                <span class="service-label">Service</span>
+                <span class="service-label">Service 03</span>
                 <h3>Custom Jewelry</h3>
                 <p>Here are some examples of my custom jewelry and accessories, most of them made from semi-precious
                     stones. These designs can be purchased at my studio. I believe in the special power of natural
