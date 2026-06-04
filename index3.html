@@ -237,16 +237,15 @@
             position: absolute;
             inset: 0;
             background-image: linear-gradient(135deg,
-                rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 10%,
-                rgba(0,0,0,0.16) 10%, rgba(0,0,0,0.16) 22%,
-                rgba(255,255,255,0.95) 22%, rgba(255,255,255,0.95) 32%,
-                rgba(0,0,0,0.16) 32%, rgba(0,0,0,0.16) 46%,
-                rgba(255,255,255,0.95) 46%, rgba(255,255,255,0.95) 56%,
-                rgba(0,0,0,0.16) 56%, rgba(0,0,0,0.16) 66%,
-                rgba(255,255,255,0.95) 66%, rgba(255,255,255,0.95) 78%,
-                rgba(0,0,0,0.16) 78%, rgba(0,0,0,0.16) 88%,
-                rgba(255,255,255,0.95) 88%, rgba(255,255,255,0.95) 100%
-            );
+                    rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 10%,
+                    rgba(0, 0, 0, 0.16) 10%, rgba(0, 0, 0, 0.16) 22%,
+                    rgba(255, 255, 255, 0.95) 22%, rgba(255, 255, 255, 0.95) 32%,
+                    rgba(0, 0, 0, 0.16) 32%, rgba(0, 0, 0, 0.16) 46%,
+                    rgba(255, 255, 255, 0.95) 46%, rgba(255, 255, 255, 0.95) 56%,
+                    rgba(0, 0, 0, 0.16) 56%, rgba(0, 0, 0, 0.16) 66%,
+                    rgba(255, 255, 255, 0.95) 66%, rgba(255, 255, 255, 0.95) 78%,
+                    rgba(0, 0, 0, 0.16) 78%, rgba(0, 0, 0, 0.16) 88%,
+                    rgba(255, 255, 255, 0.95) 88%, rgba(255, 255, 255, 0.95) 100%);
             background-size: 420px 420px;
             opacity: 0.12;
             pointer-events: none;
@@ -393,16 +392,15 @@
             position: absolute;
             inset: 0;
             background-image: linear-gradient(150deg,
-                rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 10%,
-                rgba(0,0,0,0.16) 10%, rgba(0,0,0,0.16) 24%,
-                rgba(255,255,255,0.95) 24%, rgba(255,255,255,0.95) 32%,
-                rgba(0,0,0,0.16) 32%, rgba(0,0,0,0.16) 44%,
-                rgba(255,255,255,0.95) 44%, rgba(255,255,255,0.95) 56%,
-                rgba(0,0,0,0.16) 56%, rgba(0,0,0,0.16) 68%,
-                rgba(255,255,255,0.95) 68%, rgba(255,255,255,0.95) 80%,
-                rgba(0,0,0,0.16) 80%, rgba(0,0,0,0.16) 90%,
-                rgba(255,255,255,0.95) 90%, rgba(255,255,255,0.95) 100%
-            );
+                    rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 10%,
+                    rgba(0, 0, 0, 0.16) 10%, rgba(0, 0, 0, 0.16) 24%,
+                    rgba(255, 255, 255, 0.95) 24%, rgba(255, 255, 255, 0.95) 32%,
+                    rgba(0, 0, 0, 0.16) 32%, rgba(0, 0, 0, 0.16) 44%,
+                    rgba(255, 255, 255, 0.95) 44%, rgba(255, 255, 255, 0.95) 56%,
+                    rgba(0, 0, 0, 0.16) 56%, rgba(0, 0, 0, 0.16) 68%,
+                    rgba(255, 255, 255, 0.95) 68%, rgba(255, 255, 255, 0.95) 80%,
+                    rgba(0, 0, 0, 0.16) 80%, rgba(0, 0, 0, 0.16) 90%,
+                    rgba(255, 255, 255, 0.95) 90%, rgba(255, 255, 255, 0.95) 100%);
             background-size: 420px 420px;
             opacity: 0.1;
             pointer-events: none;
@@ -643,6 +641,31 @@
             letter-spacing: 2px;
         }
 
+        /* --- ZEBRA PATTERN DIVIDER --- */
+        .zebra-divider {
+            width: 100%;
+            height: 120px;
+            background-image: url('./images/zebra-pattern.jpg');
+            background-size: auto 400%;
+            background-position: center;
+            background-repeat: repeat-x;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zebra-divider::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    rgba(0, 0, 0, 0.05) 0%,
+                    transparent 50%,
+                    rgba(0, 0, 0, 0.05) 100%);
+        }
+
         /* --- LIGHTBOX --- */
         .lightbox {
             display: none;
@@ -827,49 +850,82 @@
                 <span class="highlight">SEWING</span><br>
                 & ACCESSORIES
             </h1>
-            <p>I was born in the small town of Plesetsk in Northwest Russia and lived in Russia for 37 years. I graduated from law school there and worked for a long time in the legal profession. But from early childhood I was always involved in creative work, such as knitting, sewing, embroidering, crafting various things. Such activities always greatly inspired me, filled me with positive emotions. Previous generations in my family also engaged in creative work. My great grandfather, who lived in the country, knitted stockings and other things for the family and taught this skill to his daughters. My grandmother, who was also named Raisa, was a great craft maker. She crocheted and sold wonderful bed covers, table cloths and other things. She also wove area rugs and runners out of colored strings of cloth. There were very few rugs in those days, and my grandmother had a lot of success selling hers. Her husband died in 1945 from wounds he sustained during the war, and my grandmother raised her two children alone, built her own home in the 1960's, and she always worked very hard. I remember how I helped her weave those rugs on a big wooden loom. My grandmother taught me the fundamental techniques of craft making. In addition, my aunt Nina was a professional seamstress. And my mother, who received formal education in sewing, always made me dresses for the holidays. For many years I devoted all of my spare time to sewing and craft making, and to an ever deeper study of the technology of making clothing and accessories. I attended sewing school in Arkhangelsk, Russia and took courses from excellent teachers with many years of work experience. More recently, I received a degree in Image Consulting from the Moscow State University of Culture and Art. I moved to Portland, Maine in 2009 with my American husband, and we settled in Portland where I started my business. I shipped most of the equipment that I use here in my Studio from Arkhangelsk before I left. I could never leave my machines behind! I truly love my work. I view it as an opportunity to give joy to people, to create positive emotions by doing the very best that I can with each piece of clothing or craft.</p>
+            <p>I was born in the small town of Plesetsk in Northwest Russia and lived in Russia for 37 years. I
+                graduated from law school there and worked for a long time in the legal profession. But from early
+                childhood I was always involved in creative work, such as knitting, sewing, embroidering, crafting
+                various things. Such activities always greatly inspired me, filled me with positive emotions. Previous
+                generations in my family also engaged in creative work. My great grandfather, who lived in the country,
+                knitted stockings and other things for the family and taught this skill to his daughters. My
+                grandmother, who was also named Raisa, was a great craft maker. She crocheted and sold wonderful bed
+                covers, table cloths and other things. She also wove area rugs and runners out of colored strings of
+                cloth. There were very few rugs in those days, and my grandmother had a lot of success selling hers. Her
+                husband died in 1945 from wounds he sustained during the war, and my grandmother raised her two children
+                alone, built her own home in the 1960's, and she always worked very hard. I remember how I helped her
+                weave those rugs on a big wooden loom. My grandmother taught me the fundamental techniques of craft
+                making. In addition, my aunt Nina was a professional seamstress. And my mother, who received formal
+                education in sewing, always made me dresses for the holidays. For many years I devoted all of my spare
+                time to sewing and craft making, and to an ever deeper study of the technology of making clothing and
+                accessories. I attended sewing school in Arkhangelsk, Russia and took courses from excellent teachers
+                with many years of work experience. More recently, I received a degree in Image Consulting from the
+                Moscow State University of Culture and Art. I moved to Portland, Maine in 2009 with my American husband,
+                and we settled in Portland where I started my business. I shipped most of the equipment that I use here
+                in my Studio from Arkhangelsk before I left. I could never leave my machines behind! I truly love my
+                work. I view it as an opportunity to give joy to people, to create positive emotions by doing the very
+                best that I can with each piece of clothing or craft.</p>
             <a href="#contact" class="cta-button">Contact Me</a>
         </div>
         <div class="hero-right"></div>
     </section>
 
+    <!-- ZEBRA DIVIDER -->
+    <div class="zebra-divider"></div>
+
     <!-- OVERSIZED ABOUT -->
     <section class="about-oversized" id="about">
         <div class="about-number">01</div>
-        <h2>About Raisa. Seamstress of New England</h2>
+        <h2>My Story</h2>
         <div class="about-text-columns">
-            <p>I was born in the small town of Plesetsk in Northwest Russia and lived in Russia for 37 years. I
-                graduated from law school there and worked for a long time in the legal profession. But from early
-                childhood I was always involved in creative work, such as knitting, sewing, embroidering, crafting
-                various things. Such activities always greatly inspired me, filled me with positive emotions.</p>
+            <p>I was born in the small town of Plesetsk in Northwestern Russia, where I lived for 37 years. After
+                graduating from law school, I built a career in the legal profession. Yet throughout my life, creativity
+                remained an essential part of who I am. From an early age, I was drawn to making things with my
+                hands—knitting, sewing, embroidery, and various crafts. These creative pursuits brought me joy,
+                inspiration, and a sense of fulfillment that has stayed with me throughout the years.</p>
 
-            <p>Previous generations in my family also engaged in creative work. My great grandfather, who lived in the
-                country, knitted stockings and other things for the family and taught this skill to his daughters. My
-                grandmother, who was also named Raisa, was a great craft maker. She crocheted and sold wonderful bed
-                covers, table cloths and other things. She also wove area rugs and runners out of colored strings of
-                cloth.</p>
+            <p>Creativity runs deep in my family. My great-grandfather, who lived in the countryside, knitted stockings
+                and other necessities for his family and passed this skill on to his daughters. My grandmother, whose
+                name was also Raisa, was an exceptionally talented craftswoman. She crocheted beautiful bedspreads,
+                tablecloths, and decorative pieces, and she wove colorful rugs and runners from strips of fabric. At a
+                time when handmade rugs were highly valued and not easily available, her work was greatly admired and
+                sought after.</p>
 
-            <p>There were very few rugs in those days, and my grandmother had a lot of success selling hers. Her husband
-                died in 1945 from wounds he sustained during the war, and my grandmother raised her two children alone,
-                built her own home in the 1960's, and she always worked very hard. I remember how I helped her weave
-                those rugs on a big wooden loom. My grandmother taught me the fundamental techniques of craft making.
-            </p>
+            <p>After losing her husband in 1945 to wounds sustained during World War II, she raised two children on her
+                own, built her own home in the 1960s, and worked tirelessly throughout her life. I still remember
+                helping her weave rugs on a large wooden loom. It was my grandmother who introduced me to the
+                foundations of craftsmanship and taught me the value of patience, dedication, and quality.</p>
 
-            <p>In addition, my aunt Nina was a professional seamstress. And my mother, who received formal education in
-                sewing, always made me dresses for the holidays. For many years I devoted all of my spare time to sewing
-                and craft making, and to an ever deeper study of the technology of making clothing and accessories. I
-                attended sewing school in Arkhangelsk, Russia and took courses from excellent teachers with many years
-                of work experience. More recently, I received a degree in Image Consulting from the Moscow State
-                University of Culture and Art.</p>
+            <p>My family's tradition of sewing and craftsmanship continued through the next generation. My aunt Nina was
+                a professional seamstress, and my mother, who received formal training in sewing, lovingly made many of
+                my holiday dresses by hand. Inspired by these remarkable women, I devoted countless hours to sewing,
+                creating, and studying garment construction and accessory design.</p>
 
-            <p>I moved to Portland, Maine in 2009 with my American husband, and we settled in Portland where I started
-                my business. I shipped most of the equipment that I use here in my Studio from Arkhangelsk before I
-                left. I could never leave my machines behind!</p>
+            <p>Over the years, I pursued professional training to deepen my skills. I attended sewing school in
+                Arkhangelsk, Russia, and studied with experienced instructors who shared decades of industry knowledge.
+                Later, I earned a degree in Image Consulting from Moscow State University of Culture and Arts.</p>
 
-            <p>I truly love my work. I view it as an opportunity to give joy to people, to create positive emotions by
-                doing the very best that I can with each piece of clothing or craft.</p>
+            <p>In 2009, I moved to Portland, Maine, with my American husband and established my own business. Before
+                leaving Russia, I shipped most of the sewing equipment that I still use in my studio today. Leaving my
+                machines behind was never an option—they have always been an important part of my creative journey.</p>
+
+            <p>Today, I truly love what I do. Every garment, alteration, and handcrafted accessory is an opportunity to
+                bring joy, confidence, and beauty into someone's life. I approach each project with care, attention to
+                detail, and a commitment to excellence, creating pieces that are both functional and meaningful. For me,
+                sewing is more than a profession—it is a lifelong passion, a family tradition, and a way to connect with
+                people through craftsmanship and creativity.</p>
         </div>
     </section>
+
+    <!-- ZEBRA DIVIDER -->
+    <div class="zebra-divider"></div>
 
     <!-- DIAGONAL SERVICES -->
     <section class="services-diagonal" id="services">
@@ -964,6 +1020,9 @@
         </div>
     </section>
 
+    <!-- ZEBRA DIVIDER -->
+    <div class="zebra-divider"></div>
+
     <!-- GALLERY -->
     <section class="gallery-bold" id="gallery">
         <h2>The Studio Journal</h2>
@@ -1001,6 +1060,9 @@
         </div>
     </section>
 
+    <!-- ZEBRA DIVIDER -->
+    <div class="zebra-divider"></div>
+
     <!-- TESTIMONIALS -->
     <section class="testimonials-bold" id="testimonials">
         <h2>Client Voices</h2>
@@ -1030,6 +1092,9 @@
             <div class="testimonial-dot" onclick="showTestimonial(3)"></div>
         </div>
     </section>
+
+    <!-- ZEBRA DIVIDER -->
+    <div class="zebra-divider"></div>
 
     <!-- CONTACT -->
     <section class="contact-bold" id="contact">
