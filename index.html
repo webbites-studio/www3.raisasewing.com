@@ -181,14 +181,14 @@
             text-align: center;
         }
 
-        .business-card-image {
+        .businesscard-image {
             width: 100%;
             max-width: 500px;
             margin: 0 auto 40px auto;
             display: block;
         }
 
-        .business-card-image img {
+        .businesscard-image img {
             width: 100%;
             height: auto;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -227,8 +227,9 @@
 
         .hero-right {
             background-image: url('./images/owner.jpg');
-            background-size: cover;
-            background-position: center;
+            background-size: contain;
+            background-position: center top;
+            background-repeat: no-repeat;
             position: relative;
         }
 
@@ -245,7 +246,7 @@
         /* --- OVERSIZED TEXT ABOUT --- */
         .about-oversized {
             position: relative;
-            padding: 150px 80px;
+            padding: 40px 80px 150px;
             background-color: #ffffff;
             overflow: hidden;
         }
@@ -282,7 +283,7 @@
         .services-diagonal {
             background-color: #ffffff;
             color: var(--dark);
-            padding: 150px 0;
+            padding: 150px 0 20px;
         }
 
         .service-row {
@@ -514,7 +515,7 @@
 
         /* --- CONTACT OVERLAP --- */
         .contact-bold {
-            padding: 150px 80px;
+            padding: 150px 80px 40px;
             background-color: var(--light);
         }
 
@@ -840,6 +841,7 @@
             <a href="#gallery" class="nav-link-bold">Gallery</a>
             <a href="#testimonials" class="nav-link-bold">Reviews</a>
             <a href="#contact" class="nav-link-bold">Contact</a>
+            <a href="#vendors" class="nav-link-bold">Vendors</a>
             <button class="theme-btn" onclick="toggleTheme()">Toggle Theme</button>
         </div>
     </div>
@@ -850,8 +852,8 @@
             <h1>
                 𝓡𝓐𝓘𝓢𝓐'𝓢 𝓢𝓔𝓦𝓘𝓝𝓖 & 𝓐𝓒𝓒𝓔𝓢𝓢𝓞𝓡𝓘𝓔𝓢
             </h1>
-            <div class="business-card-image">
-                <img src="./images/business-card.jpg" alt="Raisa's Business Card">
+            <div class="businesscard-image">
+                <img src="./images/businesscard.jpg" alt="Raisa's Business Card">
             </div>
             <a href="#contact" class="cta-button">Contact Me</a>
         </div>
@@ -934,7 +936,7 @@
                         <div class="stat-label">Happy Clients</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">15+</div>
+                        <div class="stat-number">25+</div>
                         <div class="stat-label">Years Experience</div>
                     </div>
                 </div>
@@ -976,7 +978,12 @@
                     </div>
                 </div>
             </div>
-            <div class="service-image" style="background-image: url('./images/alteration.jpg');"></div>
+            <div class="service-images" style="display:flex; gap:0; overflow:hidden;">
+                <div class="service-image"
+                    style="background-image: url('./images/wedding1.jpeg'); flex:1; min-height:600px;"></div>
+                <div class="service-image"
+                    style="background-image: url('./images/wedding2.jpeg'); flex:1; min-height:600px;"></div>
+            </div>
         </div>
 
         <div class="service-row">
@@ -1004,30 +1011,120 @@
                     </div>
                 </div>
             </div>
-            <div class="service-image" style="background-image: url('./images/alteration.jpg');"></div>
+            <div class="service-image" style="background-image: url('./images/repairs.jpg');"></div>
         </div>
 
         <div class="service-row">
             <div class="service-content">
                 <span class="service-label">Service 4</span>
-                <h3>Service 4 Custom accessories</h3>
-                <p>Here are some examples of my custom jewelry and accessories, most of them made from semi-precious
-                    stones. These designs can be purchased at my studio. I believe in the special power of natural
-                    stones, which can give us energy and good fortune, can heal us, and can help us attain spiritual
-                    peace and balance. Every stone is unique and has its own significance.</p>
-                <p>You can learn about the qualities of various stones on the internet and order your own special piece
-                    of jewelry custom made by me, for example one that matches your astrological sign or has some other
-                    significance for you. My own positive creative energy will give your piece of jewelry additional
-                    power, imparting my wishes for your happiness and good luck.</p>
+                <h3>Custom Accessories</h3>
+                <p>Bespoke Accessories: Artistry in Detail &amp; Memories in Every Stitch</p>
+                <p>At Raisa's Sewing &amp; Accessories, I believe that a flawless look is defined not only by the
+                    perfect fit of a dress but by the accessories that carry meaning and a story. I offer unique
+                    solutions that transform the tailoring process into the creation of a complete, couture ensemble.
+                </p>
+
+                <p><strong>The Magic of Transformation: Custom Fabric Brooches</strong></p>
+                <p>When I shorten the hem of your gown, precious remnants of fabric are often left behind. Instead of
+                    letting them go to waste, I transform these delicate pieces into an exquisite, handcrafted
+                    accessory.</p>
+                <ul
+                    style="font-family: 'Lora', serif; line-height: 1.8; color: #000; padding-left: 20px; margin-bottom: 20px;">
+                    <li><strong>Flawless Harmony:</strong> A floral brooch created from your own dress fabric matches
+                        the texture and shade perfectly, creating a sophisticated and cohesive look.</li>
+                    <li><strong>Personalized Accents:</strong> You can choose between a timeless gold or a sleek silver
+                        center for your flower. I then meticulously finish each piece with shimmering beads and
+                        rhinestones to add a touch of luxury.</li>
+                    <li><strong>For Bridesmaids:</strong> This is a particularly meaningful choice for bridal parties.
+                        Matching or stylistically coordinated brooches serve as a beautiful unifying symbol for the
+                        bridesmaids.</li>
+                    <li><strong>A Keepsake to Cherish:</strong> Unlike fresh flowers, this brooch will never wither.
+                        Long after the wedding day, it remains a versatile accessory for your other outfits—a jacket, a
+                        hat, or an evening coat—forever preserving the warm memories of a wonderful celebration.</li>
+                </ul>
+
+                <p><strong>The Finishing Touch: Handcrafted Clutches &amp; Handbags</strong></p>
+                <p>No special occasion outfit is complete without the perfect bag. I design and create exclusive
+                    clutches and handbags that serve as a natural extension of your evening or bridal look.</p>
+                <ul
+                    style="font-family: 'Lora', serif; line-height: 1.8; color: #000; padding-left: 20px; margin-bottom: 20px;">
+                    <li><strong>Custom Craftsmanship:</strong> I select materials that echo the elements of your
+                        gown—whether it's delicate lace, shimmering silk, or hand-embroidered pearls.</li>
+                    <li><strong>Functional Elegance:</strong> Each piece is created with your specific needs in mind,
+                        ensuring your accessory is as practical as it is beautiful for your most important day.</li>
+                </ul>
+
+                <p><em>Your style is a reflection of your individuality. Let me create the accessories that tell your
+                        story.</em></p>
+
+                <br>
+                <p><strong>The Thread of Time: A Dialogue Between Generations</strong></p>
+                <p>There is a silent dialogue between the fabric of the past and the dreams of the future. When I work
+                    with a vintage 1980s wedding gown, I don't just see lace and silk; I see a story that is waiting to
+                    be retold for a new era.</p>
+
+                <p><strong>The Transformation:</strong></p>
+                <p>I reimagined the classic silhouette to fit the spirit of a modern bride, but the soul of the original
+                    gown found its new life in the details. I transformed the vintage train into a bespoke bridal purse,
+                    accented with a modern ring handle and delicate pearl embroidery.</p>
+
+                <p><strong>The Philosophy:</strong></p>
+                <p>This is more than just upcycling; it is about continuity. As the bride walks toward her future, she
+                    carries a tangible piece of history in her hands. It is a bridge between two lives and two eras,
+                    proving that beauty is never lost—it only changes form.</p>
+
+                <p>At Raisa's Sewing &amp; Accessories, I believe that every stitch is a connection. I don't just create
+                    accessories; I weave together the threads of memory, ensuring that the elegance of the past remains
+                    a living part of your most beautiful moments.</p>
 
             </div>
-            <div class="service-image" style="background-image: url('./images/jewelry.jpg');"></div>
+            <div class="service-image" style="display: flex; flex-direction: column; padding: 0; overflow: hidden;">
+                <div style="flex: 1; overflow: hidden;">
+                    <img src="./images/722468621_1350803010546467_1284393769687923448_n.jpg" alt="Accessories detail"
+                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <div style="flex: 1; overflow: hidden;">
+                    <img src="./images/723161590_981719771435263_5307424696089103997_n.jpg" alt="Accessories detail"
+                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <div style="flex: 1; overflow: hidden;">
+                    <img src="./images/723479829_895957532754893_5690549081120527361_n.jpg" alt="Accessories detail"
+                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <div style="flex: 1; overflow: hidden;">
+                    <img src="./images/723599274_1386876776675701_8622300869009778959_n.jpg" alt="Accessories detail"
+                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+            </div>
         </div>
 
-        <div class="service-row">
-            <div class="service-content">
+        <!-- Service 4 extra photos -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;">
+            <div style="aspect-ratio: 3/4; overflow: hidden;">
+                <img src="./images/greendress1.jpg" alt="Custom brooch on green dress"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="aspect-ratio: 3/4; overflow: hidden;">
+                <img src="./images/greendress2.jpg" alt="Bridesmaid with fabric brooch"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="aspect-ratio: 3/4; overflow: hidden;">
+                <img src="./images/greendress3.jpg" alt="Evening gown with handcrafted accessory"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+        </div>
+
+        <div class="service-row" style="grid-template-columns: 1fr;">
+            <div class="service-content" style="max-width: 100%;">
                 <span class="service-label">Service 5</span>
-                <h3>Wedding Dress & Formal Wear Alteration</h3>
+                <h3>Policy</h3>
                 <p>Your most cherished moments deserve a flawless fit. Whether you are walking down the aisle, attending
                     a gala, celebrating at a prom, or preparing for a special evening, expertly tailored alterations can
                     transform a beautiful garment into one that feels truly made for you.</p>
@@ -1041,12 +1138,49 @@
                     skilled craftsmanship and personalized service, we ensure your garment fits beautifully and allows
                     you to enjoy every moment with confidence.</p>
             </div>
-            <div class="service-images" style="display:flex; gap:0; overflow:hidden;">
-                <div class="service-image"
-                    style="background-image: url('./images/wedding1.jpeg'); flex:1; min-height:600px;"></div>
-                <div class="service-image"
-                    style="background-image: url('./images/wedding2.jpeg'); flex:1; min-height:600px;"></div>
-            </div>
+        </div>
+    </section>
+
+    <!-- ZEBRA DIVIDER -->
+    <div class="zebra-divider"></div>
+
+    <!-- STUDIO GALLERY -->
+    <section style="padding: 80px 80px; background-color: var(--light);">
+        <h2 style="font-size: 3rem; letter-spacing: -2px; margin-bottom: 60px; text-align: center;">The Studio</h2>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+            <div style="aspect-ratio: 1; overflow: hidden;"><img src="./images/Studio1.jpg" alt="Studio 1"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
+            <div style="aspect-ratio: 1; overflow: hidden;"><img src="./images/Studio2.jpg" alt="Studio 2"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
+            <div style="aspect-ratio: 1; overflow: hidden;"><img src="./images/studio3.jpg" alt="Studio 3"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
+            <div style="aspect-ratio: 1; overflow: hidden;"><img src="./images/studio4.jpg" alt="Studio 4"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
+            <div style="aspect-ratio: 1; overflow: hidden;"><img src="./images/studio5.jpg" alt="Studio 5"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
+            <div style="aspect-ratio: 1; overflow: hidden;"><img src="./images/studio6.jpg" alt="Studio 6"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
+            <div style="aspect-ratio: 1; overflow: hidden;"><img src="./images/studio7.jpg" alt="Studio 7"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
+            <div style="aspect-ratio: 1; overflow: hidden;"><img src="./images/studio8.jpg" alt="Studio 8"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
+            <div style="aspect-ratio: 1; overflow: hidden;"><img src="./images/studio9.jpg" alt="Studio 9"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
+            <div style="aspect-ratio: 1; overflow: hidden;"><img src="./images/studio10.jpg" alt="Studio 10"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
+            <div style="aspect-ratio: 1; overflow: hidden;"><img src="./images/studio11.jpg" alt="Studio 11"
+                    style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
         </div>
     </section>
 
@@ -1055,38 +1189,128 @@
 
     <!-- GALLERY -->
     <section class="gallery-bold" id="gallery">
-        <h2>The Studio Journal</h2>
+        <h2>Gallery</h2>
         <div class="gallery-grid-bold">
-            <div class="gallery-item-bold">
-                <img src="./images/1.png" alt="Green dress back detail">
-            </div>
-            <div class="gallery-item-bold">
-                <img src="./images/2.png" alt="Green dress front detail">
-            </div>
-            <div class="gallery-item-bold">
-                <img src="./images/3.png" alt="Beige dress side detail">
-            </div>
-            <div class="gallery-item-bold">
-                <img src="./images/4.png" alt="Beige dress back chains">
-            </div>
-            <div class="gallery-item-bold">
-                <img src="./images/5.png" alt="Three women in turquoise dresses">
-            </div>
-            <div class="gallery-item-bold">
-                <img src="./images/6.png" alt="Turquoise dress portrait">
-            </div>
-            <div class="gallery-item-bold">
-                <img src="./images/7.png" alt="Red dress with zebra detail">
-            </div>
-            <div class="gallery-item-bold">
-                <img src="./images/8.png" alt="Portrait by the window">
-            </div>
-            <div class="gallery-item-bold">
-                <img src="./images/9.png" alt="Woman in black and turquoise dress">
-            </div>
-            <div class="gallery-item-bold">
-                <img src="./images/10.png" alt="Close-up portrait in studio">
-            </div>
+            <div class="gallery-item-bold"><img src="./images/724436327_1010237321547971_8808546956734717444_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724419638_1005494215215404_6257735644747002989_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724407792_1014152108276379_3307401432481045462_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724361327_1010260705028027_4518921927606280660_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724349921_1336909611736775_4596516955799889283_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724251397_2360416494368381_5103587644329030233_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724242208_1718151722704380_1233424918356245501_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724242208_1014045077882083_4099685316456155315_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724220826_1637267930662788_1682341830175524039_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724169827_1017598083984060_6932864751290891465_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724157905_1563420632174569_6145594174781148568_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724138177_3257111961147059_4877488741984556608_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724122989_1610080677319714_306026727130955325_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724122983_1903324187722097_6522259729236785438_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724097530_1636547434093749_9085135590412371685_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723987829_1006167608567567_7352911701701667596_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723930674_1570187214737780_5881022255043300255_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723894558_1509660370106295_7687598645361177757_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723894552_2087526725979143_771570264089155810_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723894552_1532868498346184_6173315608225510189_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723838028_1582785019848338_8372476055827420870_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723767666_924481020649380_7786248731083482400_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723685185_1545831333716609_1611568885964066803_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723685185_1502887834904406_7272477321157888226_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723624557_2226556188102871_7108129780975100324_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723599274_1386876776675701_8622300869009778959_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723599273_1460484649169833_452831264375959993_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723526720_1004505795654038_8235036750477191552_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723479829_895957532754893_5690549081120527361_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723385324_1268986465308843_2014458739898214041_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723330736_1019278697458205_8550617570125229862_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723196737_1890813218280996_5326397269959415086_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/723161590_981719771435263_5307424696089103997_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/722985851_1773184514104749_401232788616700662_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/722908571_2439752393195672_1240082835223811857_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/722908542_1664869311287516_8050112940013450543_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/722468621_1350803010546467_1284393769687923448_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/722073856_2284642299007404_5647893110579100897_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/722029536_1481973966525321_7627008843120245546_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/721949455_2756540448096761_3581219274505756284_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/721696449_1705888207386910_2213941558429511801_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/715629844_27247945694801789_1757103818840456151_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/715440743_986292397718901_1703174444568330900_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/712338930_1891658765553865_1372152345358404681_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/711493363_1037035065648328_5659461292170136697_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/725985134_1025713569818101_3700079480947890563_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/725588354_1530395108665698_1846702855719384734_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/725439326_937080396019620_7838407225787944555_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724789496_937399395980285_2150677270423192895_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724752304_1370392131624712_7220532722154513481_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724691152_1682846992842826_7657892653454143811_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724659985_1415320750417695_7807916287268663869_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724659980_3935654943405269_4442351130283596806_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724612361_2076076156621660_6097878372343063345_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724576272_1018164703919797_9026574514364144579_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724558315_1341642411272494_3907389675094801727_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724539371_2045858752730060_5613940761470419688_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724539371_1527782692088740_375276199339933777_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724465933_2363657270788022_7700184051746296223_n.jpg"
+                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/724445663_1534097271486086_5787181055593160515_n.jpg"
+                    alt="Studio work"></div>
         </div>
     </section>
 
@@ -1181,6 +1405,80 @@
                 <p>Tue-Fri: 10 AM - 5 PM</p>
                 <p>Sat, Sun, Holidays: Closed</p>
             </div>
+        </div>
+    </section>
+
+    <!-- RECOMMENDED VENDORS -->
+    <section id="vendors" style="padding: 0 80px 80px; background-color: var(--light); text-align: center;">
+        <h2 style="font-size: 3rem; letter-spacing: -2px; margin-bottom: 20px;">Recommended Vendors</h2>
+        <p style="color: var(--grey); font-size: 1rem; margin-bottom: 20px;">Trusted partners we love working with</p>
+        <p
+            style="color: var(--grey); font-size: 1rem; font-family: 'Lora', serif; font-style: italic; max-width: 700px; margin: 0 auto 70px auto; line-height: 1.8;">
+            A circle of those who inspire. Here, I share the artisans and businesses that earn my respect—a community
+            defined by quality, hand-made artistry, and integrity in every single detail.</p>
+        <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; align-items: stretch;">
+
+            <!-- Vendor Card 1 -->
+            <div style="background: #fff; border: 1px solid var(--border); padding: 50px 40px; max-width: 320px; width: 100%; box-shadow: 0 8px 30px rgba(0,0,0,0.07); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; display: flex; flex-direction: column;"
+                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 16px 50px rgba(0,0,0,0.13)'"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.07)'">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--teal);">
+                </div>
+                <div
+                    style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--teal); margin-bottom: 18px;">
+                    📷 Photography</div>
+                <h3
+                    style="font-size: 1.35rem; font-weight: 800; margin-bottom: 12px; color: var(--dark); line-height: 1.3;">
+                    Natalia Price Photography</h3>
+                <p style="color: var(--grey); font-size: 0.9rem; margin-bottom: 30px; line-height: 1.6;">Capturing your
+                    most beautiful moments with artistry and heart.</p>
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto;">
+                    <a href="https://npricephoto.com/" target="_blank" rel="noopener noreferrer"
+                        style="display: block; padding: 10px 24px; background: var(--teal); color: #fff; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; text-align: center;">🌐
+                        Website</a>
+                    <div style="display: flex; gap: 12px;">
+                        <a href="https://www.facebook.com/nataliapricephotography" target="_blank"
+                            rel="noopener noreferrer"
+                            style="flex: 1; padding: 10px; border: 2px solid var(--teal); color: var(--teal); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; text-align: center;">f
+                            Facebook</a>
+                        <a href="https://www.instagram.com/nataliapricephoto/" target="_blank" rel="noopener noreferrer"
+                            style="flex: 1; padding: 10px; border: 2px solid var(--teal); color: var(--teal); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; text-align: center;">&#9752;
+                            Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vendor Card 2 -->
+            <div style="background: #fff; border: 1px solid var(--border); padding: 50px 40px; max-width: 320px; width: 100%; box-shadow: 0 8px 30px rgba(0,0,0,0.07); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; display: flex; flex-direction: column;"
+                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 16px 50px rgba(0,0,0,0.13)'"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.07)'">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--teal);">
+                </div>
+                <div
+                    style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--teal); margin-bottom: 18px;">
+                    ✨ Event Planner &amp; Coordinator</div>
+                <h3
+                    style="font-size: 1.35rem; font-weight: 800; margin-bottom: 12px; color: var(--dark); line-height: 1.3;">
+                    Inspire Me Event Planner</h3>
+                <p style="color: var(--grey); font-size: 0.9rem; margin-bottom: 30px; line-height: 1.6;">Bringing your
+                    dream event to life with elegance and precision.</p>
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto;">
+                    <a href="https://www.inspiremeeventplanner.com/" target="_blank" rel="noopener noreferrer"
+                        style="display: block; padding: 10px 24px; background: var(--teal); color: #fff; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; text-align: center;">🌐
+                        Website</a>
+                    <div style="display: flex; gap: 12px;">
+                        <a href="https://www.facebook.com/people/Inspire-Me-Photography-Event-Planner/100083261191488/"
+                            target="_blank" rel="noopener noreferrer"
+                            style="flex: 1; padding: 10px; border: 2px solid var(--teal); color: var(--teal); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; text-align: center;">f
+                            Facebook</a>
+                        <a href="https://www.instagram.com/inspiremephotographyevents" target="_blank"
+                            rel="noopener noreferrer"
+                            style="flex: 1; padding: 10px; border: 2px solid var(--teal); color: var(--teal); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; text-align: center;">&#9752;
+                            Instagram</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
