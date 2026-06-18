@@ -46,6 +46,12 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
         h1,
@@ -246,7 +252,7 @@
         /* --- OVERSIZED TEXT ABOUT --- */
         .about-oversized {
             position: relative;
-            padding: 40px 80px 150px;
+            padding: 24px 80px 56px;
             background-color: #ffffff;
             overflow: hidden;
         }
@@ -283,7 +289,7 @@
         .services-diagonal {
             background-color: #ffffff;
             color: var(--dark);
-            padding: 150px 0 20px;
+            padding: 0 0 20px;
         }
 
         .service-row {
@@ -382,10 +388,43 @@
             background: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
         }
 
+        .service-image-crisp {
+            background-size: contain !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            background-color: #f3f3f3;
+        }
+
+        .service-image-crisp::before {
+            display: none;
+        }
+
+        .service-row-accessories .service-image {
+            gap: 10px;
+            background-color: #fff;
+            padding: 10px !important;
+        }
+
+        .service-row-accessories .service-image::before {
+            display: none;
+        }
+
+        .service-row-accessories .service-image>div {
+            background-color: #f3f3f3;
+            padding: 8px;
+        }
+
+        .service-row-accessories .service-image img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+            transition: none !important;
+        }
+
         /* --- GRID GALLERY --- */
         .gallery-bold {
             position: relative;
-            padding: 150px 80px;
+            padding: 100px 80px;
             background-color: var(--light);
             overflow: hidden;
         }
@@ -460,7 +499,7 @@
         .testimonials-bold {
             background-color: var(--accent);
             color: white;
-            padding: 150px 80px;
+            padding: 100px 80px;
             text-align: center;
         }
 
@@ -515,7 +554,7 @@
 
         /* --- CONTACT OVERLAP --- */
         .contact-bold {
-            padding: 150px 80px 40px;
+            padding: 110px 80px 40px;
             background-color: var(--light);
         }
 
@@ -633,6 +672,17 @@
             text-decoration: underline;
         }
 
+        .vendors-grid {
+            flex-wrap: nowrap !important;
+            align-items: stretch;
+        }
+
+        .vendor-card {
+            flex: 1 1 0;
+            max-width: none !important;
+            min-width: 0;
+        }
+
         /* --- FOOTER --- */
         .footer-bold {
             background-color: var(--teal);
@@ -647,7 +697,7 @@
         /* --- ZEBRA PATTERN DIVIDER --- */
         .zebra-divider {
             width: 100%;
-            height: 120px;
+            height: 90px;
             background-image: url('./images/zebra-pattern.jpg');
             background-size: auto 400%;
             background-position: center;
@@ -795,6 +845,20 @@
                 gap: 20px;
             }
 
+            p,
+            li {
+                font-size: 1rem;
+                line-height: 1.75;
+            }
+
+            .vendors-grid {
+                flex-wrap: wrap !important;
+            }
+
+            .vendor-card {
+                flex: 1 1 280px;
+            }
+
             .nav-link-bold {
                 font-size: 0.75rem;
             }
@@ -824,6 +888,216 @@
 
             .testimonial-quote {
                 font-size: 1.3rem;
+            }
+
+            .footer-bold {
+                padding: 40px 24px;
+                letter-spacing: 1px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .top-bar {
+                position: sticky;
+                height: auto;
+                padding: 10px 12px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+
+            .logo-bold {
+                justify-content: center;
+            }
+
+            .logo-bold img {
+                height: 52px;
+            }
+
+            .top-nav {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px;
+                width: 100%;
+            }
+
+            .nav-link-bold {
+                font-size: 0.78rem;
+                letter-spacing: 0.5px;
+                text-align: center;
+                border: 1px solid var(--border);
+                padding: 9px 6px;
+                border-radius: 4px;
+            }
+
+            .nav-link-bold::after {
+                display: none;
+            }
+
+            .theme-btn {
+                grid-column: 1 / -1;
+                width: 100%;
+                font-size: 0.8rem;
+                padding: 11px 12px;
+            }
+
+            .hero-split {
+                margin-top: 0;
+            }
+
+            .hero-left {
+                padding: 30px 18px;
+            }
+
+            .hero-left h1 {
+                font-size: 1.85rem;
+                line-height: 1.2;
+            }
+
+            .businesscard-image {
+                margin-bottom: 24px;
+            }
+
+            .cta-button {
+                width: 100%;
+                text-align: center;
+                padding: 14px 16px;
+            }
+
+            .hero-right {
+                min-height: 280px;
+            }
+
+            .about-oversized,
+            .services-diagonal,
+            .gallery-bold,
+            .testimonials-bold,
+            .contact-bold {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .about-oversized {
+                padding-top: 40px;
+                padding-bottom: 50px;
+            }
+
+            .about-number {
+                font-size: 3.2rem;
+                margin-bottom: 10px;
+            }
+
+            .about-oversized h2,
+            .gallery-bold h2,
+            .testimonials-bold h2 {
+                font-size: 1.9rem;
+                margin-bottom: 28px;
+                letter-spacing: -1px;
+            }
+
+            .about-text-columns p,
+            .service-content p,
+            .contact-info-bold p,
+            .testimonial-quote {
+                font-size: 1.03rem;
+                line-height: 1.8;
+            }
+
+            .service-row {
+                min-height: auto;
+            }
+
+            .service-content {
+                padding: 32px 18px;
+            }
+
+            .service-content h3 {
+                font-size: 1.55rem;
+                line-height: 1.2;
+            }
+
+            .service-image {
+                min-height: 250px;
+            }
+
+            .service-images {
+                min-height: auto !important;
+            }
+
+            .service-images .service-image {
+                min-height: 220px !important;
+            }
+
+            .service-row-accessories .service-image {
+                max-height: none;
+            }
+
+            .service-row-accessories .service-image>div {
+                min-height: 150px;
+            }
+
+            .gallery-bold {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .gallery-grid-bold {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .testimonial-quote {
+                font-size: 1.08rem;
+                line-height: 1.65;
+            }
+
+            .contact-form-bold {
+                padding: 28px 18px;
+            }
+
+            .contact-form-bold h2 {
+                font-size: 1.9rem;
+                margin-bottom: 26px;
+            }
+
+            .contact-info-bold {
+                padding-top: 0;
+            }
+
+            .contact-info-bold h3 {
+                font-size: 1.45rem;
+            }
+
+            .studio-section {
+                padding: 50px 18px !important;
+            }
+
+            .studio-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 10px !important;
+            }
+
+            .vendors-section {
+                padding: 0 18px 50px !important;
+            }
+
+            .vendors-section h2 {
+                font-size: 1.9rem !important;
+                letter-spacing: -1px !important;
+            }
+
+            .vendors-grid {
+                gap: 14px !important;
+            }
+
+            .vendor-card {
+                max-width: none !important;
+                padding: 24px 18px !important;
+            }
+
+            p,
+            li {
+                overflow-wrap: anywhere;
             }
         }
     </style>
@@ -941,7 +1215,8 @@
                     </div>
                 </div>
             </div>
-            <div class="service-image" style="background-image: url('./images/RaisaMashine.jpg');"></div>
+            <div class="service-image service-image-crisp" style="background-image: url('./images/RaisaMashine.jpg');">
+            </div>
         </div>
 
         <div class="service-row">
@@ -978,11 +1253,14 @@
                     </div>
                 </div>
             </div>
-            <div class="service-images" style="display:flex; gap:0; overflow:hidden;">
+            <div class="service-images"
+                style="display:flex; flex-direction:column; gap:0; overflow:hidden; min-height:600px;">
                 <div class="service-image"
-                    style="background-image: url('./images/wedding1.jpeg'); flex:1; min-height:600px;"></div>
+                    style="background-image: url('./images/wedding1.jpeg'); flex:1; min-height:300px; background-size:contain; background-repeat:no-repeat; background-color:#f3f3f3;">
+                </div>
                 <div class="service-image"
-                    style="background-image: url('./images/wedding2.jpeg'); flex:1; min-height:600px;"></div>
+                    style="background-image: url('./images/wedding2.jpeg'); flex:1; min-height:300px; background-size:contain; background-repeat:no-repeat; background-color:#f3f3f3;">
+                </div>
             </div>
         </div>
 
@@ -1006,7 +1284,7 @@
                         <div class="stat-label">Care</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">15+</div>
+                        <div class="stat-number">25+</div>
                         <div class="stat-label">Years Experience</div>
                     </div>
                 </div>
@@ -1014,7 +1292,29 @@
             <div class="service-image" style="background-image: url('./images/repairs.jpg');"></div>
         </div>
 
-        <div class="service-row">
+        <div class="service-row service-row-accessories">
+            <div class="service-image" style="display: flex; flex-direction: column; padding: 0; overflow: hidden;">
+                <div style="flex: 1; overflow: hidden;">
+                    <img src="./images/whitedress.jpg" alt="White dress accessory"
+                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;">
+                </div>
+                <div style="flex: 1; overflow: hidden;">
+                    <img src="./images/whitebad.jpg" alt="White bag accessory"
+                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;">
+                </div>
+                <div style="flex: 1; overflow: hidden;">
+                    <img src="./images/sewer.jpg" alt="Sewer at work"
+                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;">
+                </div>
+                <div style="flex: 1; overflow: hidden;">
+                    <img src="./images/goldenbag.jpg" alt="Golden bag accessory"
+                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;">
+                </div>
+                <div style="flex: 1; overflow: hidden;">
+                    <img src="./images/silverbag.jpg" alt="Silver bag accessory"
+                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;">
+                </div>
+            </div>
             <div class="service-content">
                 <span class="service-label">Service 4</span>
                 <h3>Custom Accessories</h3>
@@ -1078,28 +1378,6 @@
                     a living part of your most beautiful moments.</p>
 
             </div>
-            <div class="service-image" style="display: flex; flex-direction: column; padding: 0; overflow: hidden;">
-                <div style="flex: 1; overflow: hidden;">
-                    <img src="./images/722468621_1350803010546467_1284393769687923448_n.jpg" alt="Accessories detail"
-                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
-                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                </div>
-                <div style="flex: 1; overflow: hidden;">
-                    <img src="./images/723161590_981719771435263_5307424696089103997_n.jpg" alt="Accessories detail"
-                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
-                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                </div>
-                <div style="flex: 1; overflow: hidden;">
-                    <img src="./images/723479829_895957532754893_5690549081120527361_n.jpg" alt="Accessories detail"
-                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
-                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                </div>
-                <div style="flex: 1; overflow: hidden;">
-                    <img src="./images/723599274_1386876776675701_8622300869009778959_n.jpg" alt="Accessories detail"
-                        style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
-                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                </div>
-            </div>
         </div>
 
         <!-- Service 4 extra photos -->
@@ -1123,20 +1401,81 @@
 
         <div class="service-row" style="grid-template-columns: 1fr;">
             <div class="service-content" style="max-width: 100%;">
-                <span class="service-label">Service 5</span>
-                <h3>Policy</h3>
-                <p>Your most cherished moments deserve a flawless fit. Whether you are walking down the aisle, attending
-                    a gala, celebrating at a prom, or preparing for a special evening, expertly tailored alterations can
-                    transform a beautiful garment into one that feels truly made for you.</p>
-                <p>We provide professional alterations for wedding gowns, bridesmaid dresses, mother-of-the-bride
-                    attire, evening gowns, cocktail dresses, and formal wear. Every adjustment is performed with
-                    exceptional attention to detail, preserving the original beauty of the garment while ensuring
-                    comfort, confidence, and elegance.</p>
-                <p>From hemming and resizing to intricate bodice adjustments, sleeve modifications, bustle creation, and
-                    custom fitting, each piece is tailored to complement your unique silhouette and personal style.</p>
-                <p>Our passion is helping you look and feel your absolute best on life's most memorable occasions. With
-                    skilled craftsmanship and personalized service, we ensure your garment fits beautifully and allows
-                    you to enjoy every moment with confidence.</p>
+                <h3>Studio Policies</h3>
+                <p style="font-style:italic; margin-bottom:1.5rem;">At Raisa's Sewing &amp; Accessories, I treat every
+                    garment as a piece of art. To ensure the highest quality of craftsmanship and a focused experience,
+                    I kindly ask you to observe the following studio policies.</p>
+
+                <h4 style="margin-bottom:0.5rem;">1. Appointments &amp; Consultations</h4>
+                <p><strong>When an Appointment is Required:</strong> To ensure dedicated time for complex fittings,
+                    appointments are mandatory for:</p>
+                <ul style="margin: 0.5rem 0 0.75rem 1.5rem; line-height:1.8;">
+                    <li>Bridal Gowns &amp; Wedding Party attire.</li>
+                    <li>Evening Gowns &amp; Formal Wear.</li>
+                    <li>Multiple-item orders (3 or more garments).</li>
+                </ul>
+                <p><strong>How to Book:</strong> You may schedule an appointment by calling or texting me at (207)
+                    650-4441 or via email at <a href="mailto:raisasewing@gmail.com">raisasewing@gmail.com</a>.</p>
+                <p style="margin-top:0.5rem;"><strong>General Alterations:</strong> For single-item, minor alterations
+                    (e.g., simple hems or repairs), you are welcome to visit without appointment during regular studio
+                    hours.</p>
+                <p style="margin-top:0.5rem;"><strong>Required Footwear:</strong> For all dress, skirt, and trouser
+                    fittings, you must bring the exact shoes you plan to wear. Any change in heel height after the
+                    length is pinned will require additional labor and will be billed as a new service.</p>
+                <p style="margin-top:0.5rem; margin-bottom:1.5rem;"><strong>Undergarments:</strong> Proper fit depends
+                    on the foundation. Please wear the specific undergarments or shapewear intended for your outfit
+                    during every fitting.</p>
+
+                <h4 style="margin-bottom:0.5rem;">2. Studio Hygiene &amp; Floor Care</h4>
+                <p><strong>Clean Environment:</strong> I maintain a clean studio floor to protect the delicate fabrics
+                    of long evening and bridal gowns. My goal is to ensure your garment remains as clean as the day you
+                    bought it. Please remove outdoor shoes when entering the fitting room.</p>
+                <p style="margin-top:0.5rem;"><strong>Clean Shoe Policy:</strong> To maintain this standard, I kindly
+                    ask all clients to bring clean, indoor-only footwear for their fittings. Please ensure soles are
+                    free of dirt and debris before entering the fitting area.</p>
+                <p style="margin-top:0.5rem; margin-bottom:1.5rem;"><strong>Garment Condition:</strong> For the
+                    protection of professional industrial equipment and hygiene, all garments must be clean. I reserve
+                    the right to decline items that are soiled or have strong odors.</p>
+
+                <h4 style="margin-bottom:0.5rem;">3. Timeline &amp; Rush Orders</h4>
+                <p><strong>Standard Lead Time:</strong> General alterations typically require 2 to 4 weeks.</p>
+                <p style="margin-top:0.5rem;"><strong>Bridal &amp; Custom Projects:</strong> Due to the complexity of
+                    bridal gowns and custom upcycling (e.g., vintage lace/pearl work), please allow 4 to 8 weeks.</p>
+                <p style="margin-top:0.5rem; margin-bottom:1.5rem;"><strong>Rush Services:</strong> Depending on
+                    capacity, rush orders may be accepted for an additional fee (starting at 25% of the service cost).
+                </p>
+
+                <h4 style="margin-bottom:0.5rem;">4. Deposits &amp; Payment</h4>
+                <p><strong>Payment Methods:</strong> I accept Cash, Personal Checks, and Venmo.</p>
+                <p style="margin-top:0.5rem;"><strong>Deposits:</strong> A 50% non-refundable deposit is required for
+                    all complex projects and bridal services to secure your place in the production schedule.</p>
+                <p style="margin-top:0.5rem; margin-bottom:1.5rem;"><strong>Final Payment:</strong> The remaining
+                    balance is due in full upon the final pickup of your garment.</p>
+
+                <h4 style="margin-bottom:0.5rem;">5. Pickup &amp; Storage</h4>
+                <p><strong>Scheduled Pickup:</strong> Your specific pickup date and time are indicated on your service
+                    receipt.</p>
+                <p style="margin-top:0.5rem;"><strong>Communication:</strong> If you are unable to collect your order at
+                    the designated time, please notify me via call, text (207-650-4441), or email as soon as possible to
+                    make alternative arrangements.</p>
+                <p style="margin-top:0.5rem;"><strong>Timely Pickup:</strong> I kindly ask that all completed items be
+                    picked up within 14 days of the scheduled date or notification of readiness.</p>
+                <p style="margin-top:0.5rem; margin-bottom:1.5rem;"><strong>Storage Fees:</strong> Due to limited studio
+                    space, items left longer than 30 days will incur a storage fee of $10 per week. Items left unclaimed
+                    after 90 days will be considered abandoned.</p>
+
+                <h4 style="margin-bottom:0.5rem;">6. Liability for Vintage &amp; Sentimental Materials</h4>
+                <p style="margin-bottom:1.5rem;"><strong>Artisanal Care:</strong> While I exercise the utmost care when
+                    working with vintage, heirloom, or upcycled materials (such as repurposed wedding trains), I cannot
+                    be held responsible for the inherent fragility or hidden defects of aged fabrics that may react
+                    unpredictably during the sewing process.</p>
+
+                <h4 style="margin-bottom:0.5rem;">Contact Information</h4>
+                <p>For any questions, updates, or to schedule a fitting:</p>
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height:1.8;">
+                    <li><strong>Phone (Call/Text):</strong> (207) 650-4441</li>
+                    <li><strong>Email:</strong> <a href="mailto:raisasewing@gmail.com">raisasewing@gmail.com</a></li>
+                </ul>
             </div>
         </div>
     </section>
@@ -1145,9 +1484,9 @@
     <div class="zebra-divider"></div>
 
     <!-- STUDIO GALLERY -->
-    <section style="padding: 80px 80px; background-color: var(--light);">
+    <section class="studio-section" style="padding: 80px 80px; background-color: var(--light);">
         <h2 style="font-size: 3rem; letter-spacing: -2px; margin-bottom: 60px; text-align: center;">The Studio</h2>
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+        <div class="studio-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
             <div style="aspect-ratio: 1; overflow: hidden;"><img src="./images/Studio1.jpg" alt="Studio 1"
                     style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;"
                     onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
@@ -1215,10 +1554,8 @@
                     alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/724138177_3257111961147059_4877488741984556608_n.jpg"
                     alt="Studio work"></div>
-            <div class="gallery-item-bold"><img src="./images/724122989_1610080677319714_306026727130955325_n.jpg"
-                    alt="Studio work"></div>
-            <div class="gallery-item-bold"><img src="./images/724122983_1903324187722097_6522259729236785438_n.jpg"
-                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/whitedress.jpg" alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/whitebad.jpg" alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/724097530_1636547434093749_9085135590412371685_n.jpg"
                     alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/723987829_1006167608567567_7352911701701667596_n.jpg"
@@ -1257,22 +1594,19 @@
                     alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/723161590_981719771435263_5307424696089103997_n.jpg"
                     alt="Studio work"></div>
-            <div class="gallery-item-bold"><img src="./images/722985851_1773184514104749_401232788616700662_n.jpg"
-                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/goldenbag.jpg" alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/722908571_2439752393195672_1240082835223811857_n.jpg"
                     alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/722908542_1664869311287516_8050112940013450543_n.jpg"
                     alt="Studio work"></div>
-            <div class="gallery-item-bold"><img src="./images/722468621_1350803010546467_1284393769687923448_n.jpg"
-                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/silverbag.jpg" alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/722073856_2284642299007404_5647893110579100897_n.jpg"
                     alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/722029536_1481973966525321_7627008843120245546_n.jpg"
                     alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/721949455_2756540448096761_3581219274505756284_n.jpg"
                     alt="Studio work"></div>
-            <div class="gallery-item-bold"><img src="./images/721696449_1705888207386910_2213941558429511801_n.jpg"
-                    alt="Studio work"></div>
+            <div class="gallery-item-bold"><img src="./images/sewer.jpg" alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/715629844_27247945694801789_1757103818840456151_n.jpg"
                     alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/715440743_986292397718901_1703174444568330900_n.jpg"
@@ -1281,7 +1615,7 @@
                     alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/711493363_1037035065648328_5659461292170136697_n.jpg"
                     alt="Studio work"></div>
-            <div class="gallery-item-bold"><img src="./images/725985134_1025713569818101_3700079480947890563_n.jpg"
+            <div class="gallery-item-bold"><img src="./images/724789496_937399395980285_2150677270423192895_n.jpg"
                     alt="Studio work"></div>
             <div class="gallery-item-bold"><img src="./images/725588354_1530395108665698_1846702855719384734_n.jpg"
                     alt="Studio work"></div>
@@ -1409,17 +1743,20 @@
     </section>
 
     <!-- RECOMMENDED VENDORS -->
-    <section id="vendors" style="padding: 0 80px 80px; background-color: var(--light); text-align: center;">
+    <section id="vendors" class="vendors-section"
+        style="padding: 0 80px 80px; background-color: var(--light); text-align: center;">
         <h2 style="font-size: 3rem; letter-spacing: -2px; margin-bottom: 20px;">Recommended Vendors</h2>
         <p style="color: var(--grey); font-size: 1rem; margin-bottom: 20px;">Trusted partners we love working with</p>
         <p
             style="color: var(--grey); font-size: 1rem; font-family: 'Lora', serif; font-style: italic; max-width: 700px; margin: 0 auto 70px auto; line-height: 1.8;">
             A circle of those who inspire. Here, I share the artisans and businesses that earn my respect—a community
             defined by quality, hand-made artistry, and integrity in every single detail.</p>
-        <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; align-items: stretch;">
+        <div class="vendors-grid"
+            style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; align-items: stretch;">
 
             <!-- Vendor Card 1 -->
-            <div style="background: #fff; border: 1px solid var(--border); padding: 50px 40px; max-width: 320px; width: 100%; box-shadow: 0 8px 30px rgba(0,0,0,0.07); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; display: flex; flex-direction: column;"
+            <div class="vendor-card"
+                style="background: #fff; border: 1px solid var(--border); padding: 50px 40px; max-width: 320px; width: 100%; box-shadow: 0 8px 30px rgba(0,0,0,0.07); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; display: flex; flex-direction: column;"
                 onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 16px 50px rgba(0,0,0,0.13)'"
                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.07)'">
                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--teal);">
@@ -1449,7 +1786,8 @@
             </div>
 
             <!-- Vendor Card 2 -->
-            <div style="background: #fff; border: 1px solid var(--border); padding: 50px 40px; max-width: 320px; width: 100%; box-shadow: 0 8px 30px rgba(0,0,0,0.07); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; display: flex; flex-direction: column;"
+            <div class="vendor-card"
+                style="background: #fff; border: 1px solid var(--border); padding: 50px 40px; max-width: 320px; width: 100%; box-shadow: 0 8px 30px rgba(0,0,0,0.07); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; display: flex; flex-direction: column;"
                 onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 16px 50px rgba(0,0,0,0.13)'"
                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.07)'">
                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--teal);">
@@ -1479,12 +1817,46 @@
                 </div>
             </div>
 
+            <!-- Vendor Card 3 -->
+            <div class="vendor-card"
+                style="background: #fff; border: 1px solid var(--border); padding: 50px 40px; max-width: 320px; width: 100%; box-shadow: 0 8px 30px rgba(0,0,0,0.07); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; display: flex; flex-direction: column;"
+                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 16px 50px rgba(0,0,0,0.13)'"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.07)'">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--teal);">
+                </div>
+                <div
+                    style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--teal); margin-bottom: 18px;">
+                    🎵 DJ Entertainment</div>
+                <h3
+                    style="font-size: 1.35rem; font-weight: 800; margin-bottom: 12px; color: var(--dark); line-height: 1.3;">
+                    Music On The Move</h3>
+                <p style="color: var(--grey); font-size: 0.9rem; margin-bottom: 30px; line-height: 1.6;">Professional DJ
+                    services for weddings, private events, and celebrations that keep the dance floor moving.</p>
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-top: auto;">
+                    <a href="https://dj-entertainment.com/" target="_blank" rel="noopener noreferrer"
+                        style="display: block; padding: 10px 24px; background: var(--teal); color: #fff; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; text-align: center;">🌐
+                        Website</a>
+                    <div style="display: flex; gap: 12px;">
+                        <a href="https://www.facebook.com/MusicontheMoveDJ/" target="_blank" rel="noopener noreferrer"
+                            style="flex: 1; padding: 10px; border: 2px solid var(--teal); color: var(--teal); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; text-align: center;">f
+                            Facebook</a>
+                        <a href="https://www.instagram.com/musiconthemovedj" target="_blank" rel="noopener noreferrer"
+                            style="flex: 1; padding: 10px; border: 2px solid var(--teal); color: var(--teal); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; text-align: center;">&#9752;
+                            Instagram</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer-bold">
         &copy; 2026 Atelier Raisa. All Rights Reserved. Choose Yourself.
+        <div style="margin-top:12px; font-size:0.75rem; opacity:0.75; letter-spacing:1px; text-transform:none;">
+            Web prepared by <a href="http://www.webbites.dev/" target="_blank" rel="noopener"
+                style="color:inherit; text-decoration:underline;">www.WebBites.dev</a>
+        </div>
     </footer>
 
     <!-- LIGHTBOX MODAL -->
